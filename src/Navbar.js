@@ -1,16 +1,48 @@
 import React, { Component } from "react";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 class Navbar extends Component {
     render() {
         return (
-            <div className="Navbar">
-                <h1>Tech</h1>
-                <h1>Reviews</h1>
-                <h1>Science</h1>
-                <h1>Entertainment</h1>
-                <h1>Video</h1>
-                <h1>Podcasts</h1>
-            </div>
+            <Router>
+                <div className="Navbar">
+                    <Link
+                        to="/tech"
+                        exact
+                        style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                        Tech
+                    </Link>
+                    <Link
+                        to="/reviews"
+                        exact
+                        style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                        Reviews
+                    </Link>
+                    <Link
+                        to="/science"
+                        exact
+                        style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                        Science
+                    </Link>
+                    <Link
+                        to="/entertainment"
+                        exact
+                        style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                        Entertainment
+                    </Link>
+                    <Link
+                        to="/podcasts"
+                        exact
+                        style={{ textDecoration: "none", color: "inherit" }}
+                    >
+                        Podcasts
+                    </Link>
+                </div>
+            </Router>
         );
     }
 }
